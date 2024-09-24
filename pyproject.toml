@@ -2,11 +2,11 @@
 name = "test-selenium"
 version = "0.0.1"
 description = ""
-authors = [""]
+authors = ["Ren Adachi <49895682+moeyashi@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-selenium = "^4.24.0"
+selenium = "^4.25.0"
 
 [build-system]
 requires = ["poetry>=0.12"]
