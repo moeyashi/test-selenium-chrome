@@ -1,4 +1,8 @@
+import logging
+import time
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
 
 
 class ChromeDriver:
@@ -18,9 +22,17 @@ class ChromeDriver:
 
 
 def main():
-    with ChromeDriver() as driver:
-        driver.get('https://www.google.com/')
-        print(driver.title)
+    for _ in range(2):
+        with ChromeDriver() as driver:
+            driver.get('https://checkip.amazonaws.com/')
+            ip_text = WebDriverWait(driver, 10).until(
+                lambda d: d.find_element(by=By.XPATH, value='/html/body').text,
+                '見つかりません',
+            )
+            logging.info(f'IPアドレス: {ip_text}')
+            print(f'IPアドレス: {ip_text}')
+            time.sleep(2)
+
 
 
 main()
