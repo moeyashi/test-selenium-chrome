@@ -6,7 +6,7 @@ authors = ["Ren Adachi <49895682+moeyashi@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-selenium = "^4.33.0"
+selenium = "^4.34.0"
 
 [build-system]
 requires = ["poetry>=0.12"]
